@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'Rie';
-  src: local('Rie'), url(./assets/MADE\ TOMMY\ \(PERSONAL\ USE\)/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format('opentype');
+  font-family: "Rie";
+  src: local("Rie"),
+    url(./assets/MADE-TOMMY-REGULAR-OUTLINE.otf)
+      format("opentype");
 }
 
 @font-face {
-  font-family: 'Chi';
-  src: local('Chi'), url(./assets/Chi/Chi-Regular.otf) format('opentype');
+  font-family: "Chi";
+  src: local("Chi"), url(./assets/Chi/Chi-Regular.otf) format("opentype");
 }
 
-
-body, html {
-  background-color: #F4F3F1;
+body,
+html {
+  background-color: #f4f3f1;
   position: relative;
   margin: 0;
   padding: 0;
@@ -74,7 +75,7 @@ main {
 }
 
 .border-wrap {
-  background-color: rgba(101,136,172, 0.75);
+  background-color: rgba(101, 136, 172, 0.75);
   border-radius: 2.5vh;
 }
 
@@ -101,7 +102,6 @@ main {
   z-index: 0;
   position: relative;
   color: white;
-
 }
 
 .chunky-line::after {
@@ -120,14 +120,14 @@ main {
 }
 
 .responsiveheight {
-  height: calc(100vh - 47px)
+  height: calc(100vh - 47px);
 }
 .responsiveheight1 {
-  height: calc(100vh - 47px - 5vh)
+  height: calc(100vh - 47px - 5vh);
 }
 
 .grid-responsive-height {
-  height: calc(100vh - 62.2)
+  height: calc(100vh - 62.2);
 }
 
 .boxmargin {
@@ -142,7 +142,7 @@ main {
 .title {
   font-family: "Chi";
   font-size: max(4vw, 4vh);
-  color: #F4F3F1;
+  color: #f4f3f1;
   z-index: 1;
 }
 
@@ -166,13 +166,12 @@ main {
 .subtitle {
   font-family: "Chi";
   font-size: min(4vw, 40px);
-  color: #F4F3F1;
+  color: #f4f3f1;
   z-index: 1;
 }
 
 .bluebackground {
-
-  background-color:rgba(101,136,172, 0.75);
+  background-color: rgba(101, 136, 172, 0.75);
   border-radius: 2.5vh;
 }
 
@@ -191,7 +190,7 @@ main {
 .subheader1 {
   font-family: "Chi";
   font-size: 20px;
-  color: #F4F3F1;
+  color: #f4f3f1;
   z-index: 1;
 }
 
@@ -205,7 +204,7 @@ main {
 .header2 {
   font-family: "Chi";
   font-size: max(1.5vw, 10px);
-  color: #F4F3F1;
+  color: #f4f3f1;
   z-index: 1;
 }
 
@@ -219,7 +218,7 @@ main {
 .text1 {
   font-family: "Rie";
   font-size: min(max(1.25vw, 12px), 16px);
-  color: #F4F3F1;
+  color: #f4f3f1;
   z-index: 1;
 }
 
@@ -239,6 +238,5 @@ main {
   padding-top: 15px;
   width: min(4.5vw, 40px);
   height: auto;
-  gap: 10px
+  gap: 10px;
 }
-
