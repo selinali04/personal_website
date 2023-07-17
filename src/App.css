@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Rie';
+  src: local('Rie'), url(./assets/MADE\ TOMMY\ \(PERSONAL\ USE\)/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format('opentype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Chi';
+  src: local('Chi'), url(./assets/Chi/Chi-Regular.otf) format('opentype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+body, html {
+  background-color: #F4F3F1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: -2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body::after {
+  content: "";
+  background-image: url(./assets/pattern\ background.png);
+  background-repeat: repeat;
+  background-size: 125px 125px;
+  opacity: 0.175; /* Replace with your desired opacity value (0.0 to 1.0) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-x {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.width2 {
+  width: 97%;
+}
+
+.my-icon {
+  width: max(3.5vw, 3.5vh);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1.75vh;
+}
+
+.bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.border-wrap {
+  background-color: rgba(101,136,172, 0.75);
+  border-radius: 2.5vh;
+}
+
+.border-wrap2 {
+  background-color: rgba(244, 243, 241, 0.75);
+  border-radius: 2.5vh;
+  height: 75vh;
+  width: 75vw;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.card {
+  scroll-snap-align: start;
+  height: 50vh;
+  width: 75vw;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-inline: 5vh;
+  flex-direction: column;
+}
+
+.chunky-line {
+  z-index: 0;
+  position: relative;
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.chunky-line::after {
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background-color: #6588ac;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paddingtop {
+  padding-top: 47px;
 }
+
+.responsiveheight {
+  height: calc(100vh - 47px)
+}
+.responsiveheight1 {
+  height: calc(100vh - 47px - 5vh)
+}
+
+.grid-responsive-height {
+  height: calc(100vh - 62.2)
+}
+
+.boxmargin {
+  margin: 2.5vh;
+  border-radius: 2.5vh;
+}
+
+.inset {
+  margin-inline: 5vh;
+}
+
+.title {
+  font-family: "Chi";
+  font-size: max(4vw, 4vh);
+  color: #F4F3F1;
+  z-index: 1;
+}
+
+.title1 {
+  font-family: "Chi";
+  font-size: max(4vw, 4vh);
+  color: #6588ac;
+  z-index: 1;
+}
+
+.slideshow {
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.25rem;
+  display: grid;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.subtitle {
+  font-family: "Chi";
+  font-size: min(4vw, 40px);
+  color: #F4F3F1;
+  z-index: 1;
+}
+
+.bluebackground {
+
+  background-color:rgba(101,136,172, 0.75);
+  border-radius: 2.5vh;
+}
+
+.beigebackground {
+  background-color: rgba(244, 243, 241, 0.75);
+  border-radius: 2.5vh;
+}
+
+.subheader {
+  font-family: "Chi";
+  font-size: 20px;
+  color: #6588ac;
+  z-index: 1;
+}
+
+.subheader1 {
+  font-family: "Chi";
+  font-size: 20px;
+  color: #F4F3F1;
+  z-index: 1;
+}
+
+.header1 {
+  font-family: "Chi";
+  font-size: max(1.5vw, 10px);
+  color: #6588ac;
+  z-index: 1;
+}
+
+.header2 {
+  font-family: "Chi";
+  font-size: max(1.5vw, 10px);
+  color: #F4F3F1;
+  z-index: 1;
+}
+
+.text {
+  font-family: "Rie";
+  font-size: 16px;
+  color: black;
+  z-index: 1;
+}
+
+.text1 {
+  font-family: "Rie";
+  font-size: min(max(1.25vw, 12px), 16px);
+  color: #F4F3F1;
+  z-index: 1;
+}
+
+.text2 {
+  font-family: "Rie";
+  font-size: min(max(1.25vw, 12px), 16px);
+  color: #6588ac;
+  z-index: 1;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.icon {
+  padding-top: 15px;
+  width: min(4.5vw, 40px);
+  height: auto;
+  gap: 10px
+}
+
