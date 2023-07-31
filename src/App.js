@@ -24,338 +24,274 @@ function App() {
 
   return (
     <>
-      <section>
-        <nav
-          id="navbar"
-          className="text z-50 w-full fixed top-0"
-          style={{
-            backgroundColor: "#F4F3F1",
-            borderBottom: "1px solid black",
-            zIndex: 99,
-          }}
-        >
-          <div className="flex items-center py-2 justify-between mx-auto width2">
-            <ul>
-              <li>
-                <a href="#about" className="subheader">
-                  SELINA LI
-                </a>
-              </li>
-            </ul>
-            <ul>
-              <div className="flex justify-between gap-4">
-                <li>
-                  <a
-                    href="#skills"
-                    style={{
-                      borderBottom: isRef2Visible
-                        ? "1px solid #6588ac"
-                        : undefined,
-                    }}
-                  >
-                    skills
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#projects"
-                    style={{
-                      borderBottom: isRef3Visible
-                        ? "1px solid #6588ac"
-                        : undefined,
-                    }}
-                  >
-                    projects
-                  </a>
-                </li>
-              </div>
-            </ul>
+    
+    <nav id="navbar" class="navbar">
+      <div class="flex items-center py-2 justify-between mx-auto width2">
+        <ul>
+          <li>
+            <a href="#about" class="subheader">SELINA LI</a>
+          </li>
+        </ul>
+        <ul>
+          <div class="flex justify-between gap-4">
+            <li>
+              <a href="#skills" style={{borderBottom: isRef2Visible ? "1px solid #6588ac" : undefined}}>skills</a>
+            </li>
+            <li>
+              <a href="#projects" style={{borderBottom: isRef3Visible ? "1px solid #6588ac" : undefined}}>projects</a>
+            </li>
           </div>
-        </nav>
-        {/* navbar for small screens */}
-      </section>
+        </ul>
+      </div>
+    </nav>
 
-      <main>
-        {/* About Section */}
-        <section ref={ref1} id="about" className="paddingtop snap-start snap-y">
-          {/* Small devices about page*/}
-          <div className="w-screens grid grid-rows-2 responsiveheight sm:hidden">
-            <div className="w-full h-full">
-              <img
-                className="object-contain h-full w-full"
-                src={portrait}
-                alt="Selina Li"
-              />
-            </div>
-            <div className="flex snap-mandatory snap-x h-full w-full overflow-hidden">
-              <div className="snap-start shrink-0 w-full h-full bluebackground">
-                <div className="w-full h-full flex flex-col overflow-y-auto">
-                  <div className="w-full h-full flex-1 flex flex-col justify-center">
-                    <div className="title inset">SELINA LI</div>
-                    <div
-                      className="header2 inset"
-                      style={{ marginBottom: "5px" }}
-                    >
-                      aspiring software developer
-                    </div>
-                    <div className="text1 inset overflow-auto">
-                      I'm a self-proclaimed Red Bull connoisseur and an avid
-                      lover of fat raccoons. I'm currently a Sophomore at MIT
-                      majoring in course 6-3, Computer Science and Engineering.
-                      I am most passionate about exploring my interest in
-                      algorithms and data structures. When I am not doing school
-                      work or miscellaneous projects, chugging a Red Bull (sugar
-                      free), you can find me admiring the raccoons on my TikTok
-                      FYP or contributing to my losing streak in TFT.
-                    </div>
-                  </div>
-                  <div
-                    className="w-full flex justify-center"
-                    style={{ paddingTop: "5px", opacity: 0.5 }}
-                  >
-                    <div className="header2">swipe right!</div>
-                  </div>
+
+    <main class="snap-y-dir h-screen w-full">
+    {/* About Section */}
+    <section ref={ref1} id="about" class="paddingtop h-full snap-start">
+      {/* Small devices about page */}
+      <div class="w-screen grid grid-rows-2 h-full sm:hidden">
+        <div class="w-full h-full">
+          <img
+            class="object-contain h-full w-full"
+            src={portrait}
+            alt="Selina Li"
+          />
+        </div>
+        <div class="flex snap-x-dir h-full w-full overflow-hidden">
+          <div class="snap-start shrink-0 w-full h-full bluebackground overflow-y-scroll">
+            <div class="w-full h-full flex flex-col">
+              <div class="text-display flex-1 ">
+                <div className="inset">
+                <h1 class="title ">SELINA LI</h1>
+                <h2
+                  class="header2 "
+                  style={{ marginBottom: "5px" }}
+                >
+                  aspiring software developer
+                </h2>
+                <p class="text1">
+                  I'm a self-proclaimed Red Bull connoisseur and an avid lover of
+                  fat raccoons. I'm currently a Sophomore at MIT majoring in course
+                  6-3, Computer Science and Engineering. I am most passionate about
+                  exploring my interest in algorithms and data structures. When I am
+                  not doing school work or miscellaneous projects, chugging a Red Bull
+                  (sugar free), you can find me admiring the raccoons on my TikTok
+                  FYP or contributing to my losing streak in TFT.
+                </p>
                 </div>
+
               </div>
-              <div className="snap-start shrink-0 w-full h-full beigebackground flex flex-col">
-                <div
-                  className="w-full h-full flex"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <div className="title1 inset">CONTACT ME</div>
-                  <div
-                    className="header1 inset"
-                    style={{ marginBottom: "5px" }}
-                  >
-                    get in touch
-                  </div>
-                  <div className="text2 inset">
-                    If you want to get in touch, talk about anything, maybe
-                    raccoons, or just to say hi, feel free to reach out via any
-                    of my socials!
-                  </div>
-                  <div className="w-full flex justify-center gap-2">
-                    <img className="icon" src={mail} alt="mail" />
-                    <img className="icon" src={github} alt="github" />
-                    <img className="icon" src={linkedin} alt="linkedin" />
-                    <img className="icon" src={instagram} alt="instagram" />
-                  </div>
-                </div>
-                <div
-                  className="w-full flex justify-center"
-                  style={{ paddingTop: "5px", opacity: 0.5 }}
-                >
-                  <div className="header1">swipe left!</div>
-                </div>
+              <div
+                class="w-full flex justify-center"
+                style={{ paddingTop: "5px" , opacity: 0.5}}
+              >
+                <div class="header2">swipe right!</div>
               </div>
             </div>
           </div>
-
-          {/* Medium and larger devices about page*/}
-          <div className="w-screen grid grid-cols-2 responsiveheight hidden sm:grid">
-            <div className="flex items-center justify-center overflow-hidden">
-              <img className="object-contain" src={portrait} alt="Selina Li" />
-            </div>
-            <main className="responsiveheight">
-              <div className="snap-start snap-y w-full responsiveheight bluebackground flex flex-col ">
-                <div className="w-full h-full flex flex-col justify-center items-center overflow-y-auto">
-                  <div className="flex-1 flex flex-col justify-center">
-                    <div className="title inset">SELINA LI</div>
-                    <div
-                      className="header2 inset"
-                      style={{ marginBottom: "5px" }}
-                    >
-                      aspiring software developer
-                    </div>
-                    <div className="text1 inset">
-                      I'm a self-proclaimed Red Bull connoisseur and an avid
-                      lover of fat raccoons. I'm currently a Sophomore at MIT
-                      majoring in course 6-3, Computer Science and Engineering.
-                      I am most passionate about exploring my interest in
-                      algorithms and data structures. When I am not doing school
-                      work or miscellaneous projects, chugging a Red Bull (sugar
-                      free), you can find me admiring the raccoons on my TikTok
-                      FYP or contributing to my losing streak in TFT.
-                    </div>
-                  </div>
-                  <div
-                    className="w-full flex justify-center"
-                    style={{ paddingTop: "5px", opacity: 0.5 }}
-                  >
-                    <div className="header2">swipe down!</div>
-                  </div>
-                </div>
-              </div>
-              <div className="snap-start snap-y w-full responsiveheight beigebackground flex flex-col">
-                <div
-                  className="w-full flex justify-center"
-                  style={{ paddingTop: "5px", opacity: 0.5 }}
+          <div class="snap-start shrink-0 w-full h-full beigebackground overflow-y-scroll">
+            <div class="w-full h-full flex flex-col">
+              <div class="text-display flex-1">
+                <div className="inset">
+                <h1 class="title1">CONTACT ME</h1>
+                <h2
+                  class="header1"
+                  style={{ marginBottom: "5px" }}
                 >
-                  <div className="header1">swipe up!</div>
-                </div>
-                <div
-                  className="w-full h-full flex-1"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                  }}
-                >
-                  <div
-                    className="title1 inset"
-                    style={{ marginBottom: "-5px" }}
-                  >
-                    CONTACT ME
-                  </div>
-                  <div
-                    className="header1 inset"
-                    style={{ marginBottom: "5px" }}
-                  >
-                    get in touch
-                  </div>
-                  <div className="text2 inset">
-                    If you want to get in touch, talk about anything, maybe
-                    raccoons, or just to say hi, feel free to reach out via any
-                    of my socials!
-                  </div>
-                  <div className="w-full flex justify-center gap-2">
+                  get in touch
+                </h2>
+                <p class="text2">
+                  If you want to get in touch, talk about anything, maybe raccoons,
+                  or just to say hi, feel free to reach out via any of my socials!
+                </p>
+                <div class="w-full flex justify-center gap-2">
                     <a href="mailto:selina04@mit.edu">
-                      <img className="icon" src={mail} alt="mail" />
+                      <img class="icon" src={mail} alt="mail" />
                     </a>
                     <a href="https://github.com/selinali04">
-                      <img className="icon" src={github} alt="github" />
+                      <img class="icon" src={github} alt="github" />
                     </a>
                     <a href="https://www.linkedin.com/in/selina-li-a2880617b">
-                      <img className="icon" src={linkedin} alt="linkedin" />
+                      <img class="icon" src={linkedin} alt="linkedin" />
                     </a>
                     <a href="https://www.instagram.com/selinaisli/">
-                      <img className="icon" src={instagram} alt="instagram" />
+                      <img class="icon" src={instagram} alt="instagram" />
                     </a>
                   </div>
                 </div>
               </div>
-            </main>
+              <div
+                class="w-full flex justify-center"
+                style={{ paddingTop: "5px" , opacity: 0.5}}
+              >
+                <div class="header1">swipe left!</div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="w-screen grid grid-cols-2 h-full hidden sm:grid">
+        <div class="flex items-center justify-center overflow-hidden">
+          <img class="h-full w-full object-contain" src={portrait} alt="Selina Li" />
+        </div>
+        <div class="h-full snap-y-dir overflow-y-scroll">
+          <div class="snap-start text-display bluebackground h-full overflow-y-auto">
+            <div class="flex-1 text-display ">
+              <div className="inset">
+              <h1 class="title">SELINA LI</h1>
+              <h2 class="header2">aspiring software developer</h2>
+              <p class="text1">
+                I'm a self-proclaimed Red Bull connoisseur and an avid lover of fat raccoons.
+                I'm currently a Sophomore at MIT majoring in course 6-3, Computer Science and Engineering.
+                I am most passionate about exploring my interest in algorithms and data structures.
+                When I am not doing school work or miscellaneous projects, chugging a Red Bull (sugar free),
+                you can find me admiring the raccoons on my TikTok FYP or contributing to my losing streak in TFT.
+              </p>
+              </div>
+                </div>
+                <div class="w-full flex justify-center" style={{opacity: 0.5 }}>
+                  <h3 class="header2">swipe down!</h3>
+                </div>
+              </div>
+
+              <div class="snap-start shrink-0 text-display beigebackground h-full overflow-y-auto">
+                <div class="w-full flex justify-center">
+                  <h3 class="header1" style={{opacity: 0.5 }}>swipe up!</h3>
+                </div>
+                <div class="flex-1 text-display">
+                  <div className="inset">
+                  <h1 class="title1">CONTACT ME</h1>
+                  <h2 class="header1">get in touch</h2>
+                  <p class="text2">
+                    If you want to get in touch, talk about anything, maybe raccoons, or just to say hi, feel free to reach out via any of my socials!
+                  </p>
+                  </div>
+                  <div class="w-full flex justify-center gap-2">
+                    <a href="mailto:selina04@mit.edu">
+                      <img class="icon" src={mail} alt="mail" />
+                    </a>
+                    <a href="https://github.com/selinali04">
+                      <img class="icon" src={github} alt="github" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/selina-li-a2880617b">
+                      <img class="icon" src={linkedin} alt="linkedin" />
+                    </a>
+                    <a href="https://www.instagram.com/selinaisli/">
+                      <img class="icon" src={instagram} alt="instagram" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         <section
           ref={ref2}
           id="skills"
-          className="paddingtop snap-start snap-y"
+          className="w-full h-full snap-start paddingtop"
         >
           {/* Medium and larger devices skills page*/}
-          <div className="w-full responsiveheight p-10 hidden sm:grid overflow-y-auto overflow-x-hidden">
-            <div className="flex flex-col h-full">
-              <div
+          <div className="w-full h-full p-10 hidden sm:grid overflow-y-scroll">
+            <div className="flex flex-col h-full w-full">
+              <h1
                 className="title1 w-full text-center pb-2.5"
                 style={{
                   marginBottom: "5px",
                   display: "block",
-                  marginTop: "-2.5vh",
                 }}
               >
                 MY SKILLS
-              </div>
+              </h1>
 
-              <div className="grid grid-cols-2 gap-5 h-full">
-                <div className="border-wrap h-full flex flex-col justify-center">
+              <div className="grid grid-cols-2 auto-cols-fr w-full gap-5 h-full">
+                <div className="border-wrap text-display">
                   <div className="inset">
                     <span className="subheader1 bar">
-                      <div className="my-icon">
-                        <img src={software} alt="Software Icon" />
-                      </div>
-
+                      <img className ="my-icon" src={software} alt="Software Icon"/>
                       <div>
                         <span className="chunky-line">Software</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Development
-                        </span>
+                        </h2>
                       </div>
                     </span>
 
-                    <div className="text1">
+                    <p className="text1">
                       I am proficient in Python for application development,
                       scripting, and data analysis. I also have experience in
                       JavaScript, enabling me to create responsive user
                       interfaces and interact with web APIs. Additionally, I
                       have a solid grasp of C++ for tackling
                       performance-critical applications.
-                    </div>
+                    </p>
                   </div>
                 </div>
 
-                <div className="border-wrap h-full flex flex-col justify-center">
+                <div className="border-wrap text-display">
                   <div className="inset">
                     <span className="subheader1 bar">
-                      <div className="my-icon">
-                        <img src={frontend} alt="Frontend Icon" />
-                      </div>
+                      <img className ="my-icon"src={frontend} alt="Frontend Icon" />
 
                       <div>
                         <span className="chunky-line">Frontend</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Development
-                        </span>
+                        </h2>
                       </div>
                     </span>
-                    <div className="text1">
+                    <p className="text1 ">
                       Interested in UI/UX, I enjoy the creative process behind
                       web development. Familiar with Node.js and React.js
                       frameworks.
-                    </div>
+                    </p>
                   </div>
                 </div>
 
-                <div className="border-wrap h-full flex flex-col justify-center">
+                <div className="border-wrap text-display">
                   <div className="inset">
                     <span className="subheader1 bar">
-                      <div className="my-icon">
-                        <img src={research} alt="Software Icon" />
-                      </div>
+                      <img className ="my-icon" src={research} alt="Research Icon" />
 
                       <div>
                         <span className="chunky-line">Research</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Experience
-                        </span>
+                        </h2>
                       </div>
                     </span>
-                    <div className="text1">
+                    <p className="text1">
                       I conducted in-depth research on the impact of
                       physician-scientists on innovation. This involved
                       extensive data analysis and interpretation. To manage the
                       amount of information, I handled and organized various
                       databases. Gained insight into machine learning and
                       methodologies for training.
-                    </div>
+                    </p>
                   </div>
                 </div>
 
-                <div className="border-wrap h-full flex flex-col justify-center">
+                <div className="border-wrap text-display">
                   <div className="inset">
                     <span className="subheader1 bar">
-                      <div className="my-icon">
-                        <img src={document} alt="Frontend Icon" />
-                      </div>
-
+                      <img className ="my-icon"src={document} alt="Frontend Icon" />
                       <div>
                         <a
                           href={resume}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noreferrer"
                         >
                           <span className="chunky-line">Download</span>
                           <br />
-                          <span style={{ display: "block", marginTop: "-5px" }}>
+                          <h2 style={{ display: "block", marginTop: "-5px" }}>
                             Resume
-                          </span>
+                          </h2>
                         </a>
                       </div>
                     </span>
@@ -364,24 +300,24 @@ function App() {
               </div>
             </div>
           </div>
+
+
 
           {/* Smaller devices skills page*/}
-          <div className="w-full responsiveheight p-10 sm:hidden">
-            <div className="flex flex-col h-full justify-center ">
-              <div
+          <div className="w-full h-full sm:hidden p-10">
+            <div className="text-display">
+              <h1
                 className="title1 w-full text-center pb-2.5"
                 style={{
                   marginBottom: "5px",
                   display: "block",
-                  marginTop: "-2.5vh",
                 }}
               >
                 MY SKILLS
-              </div>
+              </h1>
 
-              <div className="w-full">
-                <div className="slideshow">
-                  <div className="border-wrap card">
+                <div className="slideshow overflow-y-scroll">
+                  <div className="border-wrap card overflow-y-auto">
                     <span className="subheader1 bar">
                       <div className="my-icon">
                         <img src={software} alt="Software Icon" />
@@ -390,23 +326,23 @@ function App() {
                       <div>
                         <span className="chunky-line">Software</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Development
-                        </span>
+                        </h2>
                       </div>
                     </span>
 
-                    <div className="text1 overflow-y-auto">
+                    <p className="text1">
                       I am proficient in Python for application development,
                       scripting, and data analysis. I also have experience in
                       JavaScript, enabling me to create responsive user
                       interfaces and interact with web APIs. Additionally, I
                       have a solid grasp of C++ for tackling
                       performance-critical applications.
-                    </div>
+                    </p>
                   </div>
 
-                  <div className="border-wrap card">
+                  <div className="border-wrap card overflow-y-auto">
                     <span className="subheader1 bar">
                       <div className="my-icon">
                         <img src={frontend} alt="Frontend Icon" />
@@ -415,19 +351,19 @@ function App() {
                       <div>
                         <span className="chunky-line">Frontend</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Development
-                        </span>
+                        </h2>
                       </div>
                     </span>
-                    <div className="text1">
+                    <p className="text1">
                       Interested in UI/UX, I enjoy the creative process behind
                       web development. Familiar with Node.js and React.js
                       frameworks.
-                    </div>
+                    </p>
                   </div>
 
-                  <div className="border-wrap card">
+                  <div className="border-wrap card overflow-y-auto">
                     <span className="subheader1 bar">
                       <div className="my-icon">
                         <img src={research} alt="Software Icon" />
@@ -436,22 +372,22 @@ function App() {
                       <div>
                         <span className="chunky-line">Research</span>
                         <br />
-                        <span style={{ display: "block", marginTop: "-5px" }}>
+                        <h2 style={{ display: "block", marginTop: "-5px" }}>
                           Experience
-                        </span>
+                        </h2>
                       </div>
                     </span>
-                    <div className="text1">
+                    <p className="text1">
                       I conducted in-depth research on the impact of
                       physician-scientists on innovation. This involved
                       extensive data analysis and interpretation. To manage the
                       amount of information, I handled and organized various
                       databases. Gained insight into machine learning and
                       methodologies for training.
-                    </div>
+                    </p>
                   </div>
 
-                  <div className="border-wrap card">
+                  <div className="border-wrap card overflow-y-auto">
                     <span className="subheader1 bar">
                       <div className="my-icon">
                         <img src={document} alt="Frontend Icon" />
@@ -461,13 +397,13 @@ function App() {
                         <a
                           href={resume}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noreferrer"
                         >
                           <span className="chunky-line">Download</span>
                           <br />
-                          <span style={{ display: "block", marginTop: "-5px" }}>
+                          <h2 style={{ display: "block", marginTop: "-5px" }}>
                             Resume
-                          </span>
+                          </h2>
                         </a>
                       </div>
                     </span>
@@ -475,57 +411,49 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         <section
           ref={ref3}
           id="projects"
-          className="paddingtop snap-start snap-y responsiveheight"
+          className="w-full h-screen snap-start shrink-0 paddingtop"
         >
-          <div className="w-full h-full responsiveheight p-10 flex items-center justify-center">
+          <div className="text-display h-full items-center">
             <div className="border-wrap2">
-              <div className="flex flex-col h-full justify-center ">
-                <div
-                  className="title1 w-full text-center pb-2.5"
-                  style={{
-                    marginBottom: "15px",
-                    display: "block",
-                    marginTop: "-2.5vh",
-                  }}
-                >
+              <div className="text-display h-full overflow-y-auto">
+                <h1 className="title1 w-full text-center pb-2.5">
                   SIDE PROJECTS
-                </div>
-                <div className="inset ">
-                  <div className="flex flex-col-2 " style={{ gap: "1.75rem" }}>
-                    <div className="text2" style={{ marginTop: "0.25rem" }}>
+                </h1>
+                <div className="inset">
+                  <div className="flex flex-col-2" style={{ gap: "1.75rem" }}>
+                    <h2 className="text2" style={{ marginTop: "0.25rem" }}>
                       Ongoing
-                    </div>
+                    </h2>
                     <div>
                       <span className="subheader">
-                        <div className="my-icon">
-                            <a
-                              href="https://github.com/selinali04/image_processor/tree/main"
-                              target="_blank"
-                            >
-                              <img src={camera} alt="Frontend Icon" />
-                            </a>                        
-                        </div>
+                        <a
+                          href="https://github.com/selinali04/image_processor/tree/main"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img className = "my-icon" src={camera} alt="Frontend Icon" />
+                        </a>                        
 
-                        <div style={{ marginTop: "0.15rem" }}>
+                        <h3 style={{ marginTop: "0.15rem" }}>
                           Image Processor
-                        </div>
+                        </h3>
                       </span>
-                      <div className="text2">
+                      <p className="text2">
                         Currently working on a simple image processor -- in the
                         midst of integrating the JS with Node.js and React.js.
-                      </div>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </section>
       </main>
     </>
